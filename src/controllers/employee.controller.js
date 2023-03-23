@@ -34,7 +34,7 @@ exports.create = (req, res) => {
     }
 }
 
-exports.findAll = (req, res) => {
+exports.findById = (req, res) => {
     Employee.findById(req.params.id, (err, employee) => {
         if (err) res.send(err);
         request.json(employee)

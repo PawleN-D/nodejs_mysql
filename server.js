@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
     res.send("Hello, world!");
 })
 
+const employeeRoutes = require('./src/routes/employee.routes');
+
+app.use('/api/v1/employees', employeeRoutes);
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
